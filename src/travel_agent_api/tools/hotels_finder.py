@@ -23,11 +23,12 @@ class HotelsInput(BaseModel):
         description="Location of the hotel."
     )
     check_in_date: str = Field(
-        description="The check-in date (YYYY-MM-DD) e.g. 2024-12-13."
-    )
+    description="The check-in date in YYYY-MM-DD format."
+)
+
     check_out_date: str = Field(
-        description="The check-out date (YYYY-MM-DD) e.g. 2024-12-19."
-    )
+    description="The check-out date in YYYY-MM-DD format."
+)
     adults: Optional[int] = Field(
         1,
         description="The number of adults. Defaults to 1."

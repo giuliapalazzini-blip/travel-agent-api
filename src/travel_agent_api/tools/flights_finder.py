@@ -18,11 +18,12 @@ class FlightsInput(BaseModel):
         description="The arrival airport code (IATA)."
     )
     outbound_date: str = Field(
-        description="The outbound date (YYYY-MM-DD) e.g. 2024-12-13."
-    )
+    description="The outbound date in YYYY-MM-DD format."
+)
+
     return_date: str = Field(
-        description="The return date (YYYY-MM-DD) e.g. 2024-12-19."
-    )
+    description="The return date in YYYY-MM-DD format."
+)
     adults: Optional[int] = Field(
         1,
         description="The number of adults. Defaults to 1."

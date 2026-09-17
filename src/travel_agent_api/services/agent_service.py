@@ -32,20 +32,15 @@ class Agent:
 
         print("Travel Agent inizializzato correttamente")
 
-    def invoke(self, message: str):
+    def invoke(self, messages: list):
         print("*" * 80)
         print("Agent.invoke")
-        print(f"Messaggio ricevuto: {message}")
+        print(f"Messaggi ricevuti: {len(messages)}")
         print("*" * 80)
 
         result = self.agent.invoke(
             {
-                "messages": [
-                    {
-                        "role": "user",
-                        "content": message,
-                    }
-                ]
+                "messages": messages
             }
         )
 
